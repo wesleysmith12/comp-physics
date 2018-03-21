@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 import math
 
 for i in range(20):
-	print(random())
+	print(int(random()))
 	
 for i in range(50):
-	print(random()*10)
+	print(int(random()*10))
 	
 for i in range(1000):
 	plt.plot(random()*11, random()*11, marker="X", markersize=2, color="blue")#, linestyle="None"
