@@ -28,11 +28,17 @@ while time < n:
 	time += 1
 
 	
-plt.bar(tList, nLeftList, marker="X", markersize=2, color="blue")
-plt.ylim(0,n)
-plt.grid()
+#plt.plot(tList, nLeftList, marker="X", markersize=2, color="blue")
+#plt.ylim(0,n)
+#plt.grid()
+#plt.title("Expansion of Gas")
+#plt.xlabel("Time")
+#plt.ylabel("Remaining molecules on left")
+
+plt.bar(range(n+1), hist)
+
 plt.title("Expansion of Gas")
-plt.xlabel("Time")
-plt.ylabel("Remaining molecules on left")
+plt.xlabel("nLeft")
+plt.ylabel("nleft occurances")
 
 plt.show()
