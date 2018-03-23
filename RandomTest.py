@@ -7,10 +7,14 @@ y = []
 
 for i in range(20):
 	print(int(random()))
-	
+
+print("--------------------------------------------")
+
 for i in range(50):
 	print(int(random()*10))
-	
+
+print("--------------------------------------------")
+
 for i in range(1000):
 	x.append(random()*10)
 	y.append(random()*10)
