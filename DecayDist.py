@@ -8,6 +8,13 @@ count = 0 # Counter to do 100 initial simulations
 number = 0 # Random number
 occurances = []# Occurances list
 xRange = 30 # X range on the graph
+pList = []
+
+def poisson(k,lambdaV):
+    return (1/factorial(k))*(lambdaV**k)*(math.e**(lambdaV))
+
+for i in range(xRange):
+    pList.append(poisson(i,10))
 
 for i in range(xRange):
     occurances.append(0)
@@ -22,5 +29,10 @@ while(count < 100):
     count += 1
 print(number)
 print("n is",n)
-plt.bar(range(xRange), occurances)
+plt.plot(range(xRange), pList, color="red", label="Poisson dist")
+plt.title("Expansion of Gas")
+plt.xlabel("time")
+plt.ylabel("probability")
+plt.bar(range(xRange), occurances, color="blue", label="Simulation")
+plt.legend()
 plt.show()
