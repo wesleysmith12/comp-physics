@@ -11,10 +11,10 @@ xRange = 30 # X range on the graph
 pList = []
 
 def poisson(k,lambdaV):
-    return (1/factorial(k))*(lambdaV**k)*(math.e**(lambdaV))
+    return (1/factorial(k))*(lambdaV**k)*(math.e**(-lambdaV))
 
 for i in range(xRange):
-    pList.append(poisson(i,10))
+    pList.append(poisson(i,10)*100)
 
 for i in range(xRange):
     occurances.append(0)
