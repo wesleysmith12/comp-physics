@@ -15,6 +15,7 @@ iterationsSteps = 1000
 walkers = 20 # Repeat the simulation several times over
 sumOfW = 0
 
+# Simulate random walks
 for i in range(walkers):
     x = 0
     xList = []
@@ -32,6 +33,8 @@ for i in range(walkers):
     sumOfW += x**2
     plt.plot(range(iterationsSteps), xList)
 rms = sqrt(sumOfW/walkers)
+
+# Setup graph
 print("RMS: ",rms)
 plt.title("Random walks: Postion V.S Time")
 plt.xlabel("Time")
